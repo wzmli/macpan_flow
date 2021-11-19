@@ -6,7 +6,6 @@ library(readr)
 library(dplyr)
 library(tidyr)
 
-
 prov <- unlist(strsplit(targetname(),"[.]"))[1]
 
 url <- "https://raw.githubusercontent.com/wzmli/COVID19-Canada/master/git_push/clean.Rout.csv"
@@ -37,6 +36,8 @@ all_sub <- (all
 	)
 
 province_dat <- filter(all_sub, province == prov)
+
+stopifnot(nrow(province_dat) > 0)
 
 print(province_dat)
 

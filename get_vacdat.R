@@ -1,3 +1,6 @@
+library(shellpipes)
+rpcall("get_vacdat.Rout get_vacdat.R")
+
 library(gsheet)
 
 get_vacdat <- function(url, end_date){
@@ -40,3 +43,5 @@ get_vacdat <- function(url, end_date){
   
   return(vacdat)
 }
+
+saveEnvironment()

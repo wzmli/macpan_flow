@@ -2,9 +2,7 @@
 
 time1 <- Sys.time()
 
-
 ## LOAD LIBRARIES
-library(shellpipes)
 library(dplyr)
 library(readr)
 library(stringr)
@@ -15,6 +13,12 @@ library(lubridate)
 library(tidyr)
 library(parallel)
 library(McMasterPandemic)
+
+library(shellpipes)
+rpcall("ON.calibrate.Rout calibrate.R get_vacdat.rda ON.clean.rds")
+
+loadEnvironments()
+pdat <- rdsRead()
 
 options(macpan_pfun_method = "grep")
 
