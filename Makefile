@@ -23,7 +23,12 @@ pipeRimplicit += clean
 
 ## get_vacdat.R is a function from Irena to read a table
 
-## calibrate.R
+## Calibrate
+pipeRimplicit += calibrate
+%.calibrate.Rout: calibrate.R get_vacdat.R get_%.clean.rds
+	$(pipeR)
+
+## ON.calibrate.Rout: calibrate.R
 
 ######################################################################
 ### Makestuff
