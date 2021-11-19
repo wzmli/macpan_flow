@@ -19,9 +19,11 @@ vim_session:
 ## ON.clean.Rout: clean.R
 
 
+## Calibrate
+%.calibrate.Rout: calibrate.R get_vacdat.R get_%.clean.rds
+	$(pipeR)
 
-
-
+## ON.calibrate.Rout: calibrate.R
 
 
 ######################################################################

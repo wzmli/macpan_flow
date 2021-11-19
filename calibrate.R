@@ -1,7 +1,10 @@
+## calibrate reported cases 
+
 time1 <- Sys.time()
 
 
 ## LOAD LIBRARIES
+library(shellpipes)
 library(dplyr)
 library(readr)
 library(stringr)
@@ -12,7 +15,6 @@ library(lubridate)
 library(tidyr)
 library(parallel)
 library(McMasterPandemic)
-source("scripts/get_vacdat.R")
 
 options(macpan_pfun_method = "grep")
 
