@@ -12,17 +12,18 @@ vim_session:
 
 ######################################################################
 
+Sources += $(wildcard *.R)
+
 ## Download the data from wzmli site and format 
+pipeRimplicit += clean
 %.clean.Rout: clean.R
 	$(pipeR)
 
 ## ON.clean.Rout: clean.R
 
+## get_vacdat.R is a function from Irena to read a table
 
-
-
-
-
+## calibrate.R
 
 ######################################################################
 ### Makestuff
